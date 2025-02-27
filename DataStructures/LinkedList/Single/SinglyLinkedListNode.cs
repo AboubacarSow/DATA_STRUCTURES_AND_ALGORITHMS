@@ -1,4 +1,4 @@
-﻿namespace DataStructures.LinkedList.SinglyLinkedListNode
+﻿namespace DataStructures.LinkedList.Single
 {
     public class SinglyLinkedListNode<T>(T value): IEquatable<SinglyLinkedListNode<T>>
     {

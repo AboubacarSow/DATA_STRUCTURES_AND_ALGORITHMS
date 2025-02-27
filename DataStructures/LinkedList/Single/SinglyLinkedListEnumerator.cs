@@ -1,9 +1,7 @@
-﻿
-using DataStructures.LinkedList.SinglyLinkedListNode;
-using System.Collections;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
-namespace DataStructures.LinkedList.SinglyLinkedList
+namespace DataStructures.LinkedList.Single
 {
     internal class SinglyLinkedListEnumerator<T> : IEnumerator<T>
     {

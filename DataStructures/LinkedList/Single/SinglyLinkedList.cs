@@ -1,8 +1,6 @@
-﻿using DataStructures.LinkedList.SinglyLinkedListNode;
-using System.Collections;
-using System.Net.Http.Headers;
+﻿using System.Collections;
 
-namespace DataStructures.LinkedList.SinglyLinkedList
+namespace DataStructures.LinkedList.Single
 {
     public class SinglyLinkedList<T> : IEnumerable<T>
     {
@@ -15,7 +13,7 @@ namespace DataStructures.LinkedList.SinglyLinkedList
         public SinglyLinkedList() { Count = 0; }
         public SinglyLinkedList(IEnumerable<T> collection)
         {
-            this.AddRange(collection);
+            AddRange(collection);
         }
         //This method has O(1) time complexity
         public void AddFirst(T value)
@@ -33,7 +31,7 @@ namespace DataStructures.LinkedList.SinglyLinkedList
         public void AddRange(IEnumerable<T> collection)
         {
             foreach (var value in collection)
-                this.AddFirst(value);
+                AddFirst(value);
         }
 
         //This method has O(n) time complexity
