@@ -18,8 +18,8 @@ namespace DataStructures.LinkedList.Single
         //This method has O(1) time complexity
         public void AddFirst(T value)
         {
-            if (value is null)
-                throw new ArgumentNullException("The provided parameter may be null", nameof(value));
+            if (value==null)
+                throw new ArgumentNullException(nameof(value), "The provided parameter may be null");
             var newNode = new SinglyLinkedListNode<T>(value);
             if (InitLinkedList(newNode)) return;
             newNode.Next = Head;
@@ -84,8 +84,7 @@ namespace DataStructures.LinkedList.Single
 
         public void AddAfter(SinglyLinkedListNode<T> refNode, SinglyLinkedListNode<T> newNode)
         {
-            var value = newNode.Value;
-            AddAfter(refNode, value);
+            AddAfter(refNode, newNode.Value);
         }
 
         public void AddBefore(SinglyLinkedListNode<T> refNode, T value)
@@ -111,8 +110,7 @@ namespace DataStructures.LinkedList.Single
 
         public void AddBefore(SinglyLinkedListNode<T> refNode, SinglyLinkedListNode<T> newNode)
         {
-            var value = newNode.Value;
-            AddBefore(refNode, value);
+            AddBefore(refNode, newNode.Value);
         }
         private bool InitLinkedList(SinglyLinkedListNode<T> newNode)
         {
