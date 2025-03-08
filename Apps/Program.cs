@@ -1,4 +1,5 @@
-﻿using DataStructures.LinkedList.Double;
+﻿using DataStructures.Array;
+using DataStructures.LinkedList.Double;
 using DataStructures.LinkedList.Single;
 
 
@@ -8,9 +9,24 @@ namespace Apps
     {
         static void Main(string[] args)
         {
-            SingleList_Test();
-            DoubleList_Test();
+            var arr = new Array<int>(4, 5, 6);
+            Console.WriteLine($"First Element: {arr.First()}");
+           Stack_Test();
+            //SingleList_Test();
+            //DoubleList_Test();
             Console.ReadKey();
+        }
+
+        private static void Stack_Test()
+        {
+            Stack<int> stack = new Stack<int>();
+            int[] arr = { 1, 5, 8, 9 };
+            foreach (var item in arr)
+                stack.Push(item);
+            stack.Pop();
+            int length=stack.Count;
+           
+            Console.WriteLine($"Getting the first element of our stack: {stack.Peek()}");
         }
 
         private static void DoubleList_Test()
