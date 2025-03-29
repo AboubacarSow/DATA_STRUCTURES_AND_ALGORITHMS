@@ -1,17 +1,12 @@
 ﻿namespace DataStructures.LinkedList.Double
 {
-    public class DoublyLinkedListNode<T> : IEquatable<DoublyLinkedListNode<T>>
+    public class DoublyLinkedListNode<T>(T value) : IEquatable<DoublyLinkedListNode<T>>
     {
         public DoublyLinkedListNode<T>? Prev { get; set; }
-        public DoublyLinkedListNode<T> Next { get; set; }
-        public T Value { get;set; }
+        public DoublyLinkedListNode<T>? Next { get; set; }
+        public T Value { get; set; } = value;
 
-        public DoublyLinkedListNode(T value)
-        {
-            Value = value;
-        }
-
-        public override string ToString() => Value.ToString();
+        public override string ToString() => Value?.ToString()!;
 
         public bool Equals(DoublyLinkedListNode<T>? other)
         {

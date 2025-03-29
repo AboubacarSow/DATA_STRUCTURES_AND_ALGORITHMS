@@ -1,6 +1,7 @@
-﻿using DataStructures.Array;
-using DataStructures.LinkedList.Double;
+﻿using DataStructures.LinkedList.Double;
 using DataStructures.LinkedList.Single;
+using DataStructures.Tree.BinarySearchTree;
+using DataStructures.Tree.BinaryTree;
 
 
 namespace Apps
@@ -9,9 +10,15 @@ namespace Apps
     {
         static void Main(string[] args)
         {
-            var arr = new Array<int>(4, 5, 6);
-            Console.WriteLine($"First Element: {arr.First()}");
-           Stack_Test();
+            var binarySearchTree = new BST<int>( new int[]{ 35, 65,14, 78,24,10,45});
+            Console.WriteLine("Recursive InOrder Approch");
+            new BinaryTree<int>().InOrder(binarySearchTree.Root).ForEach(node => Console.Write($"{node,3}"));
+            Console.WriteLine("\nRecursive PreOrder Approch");
+            new BinaryTree<int>().PreOrder(binarySearchTree.Root).ForEach(node => Console.Write($"{node,3}"));
+            Console.WriteLine("\nRecursive PostOrder Approch");
+            new BinaryTree<int>().PostOrder(binarySearchTree.Root).ForEach(node => Console.Write($"{node,3}"));
+            
+            //Stack_Test();
             //SingleList_Test();
             //DoubleList_Test();
             Console.ReadKey();

@@ -1,6 +1,5 @@
 ﻿using DataStructures.Queue.Contracts;
 using DataStructures.Queue.Models.Enums;
-using System.Net.Http.Headers;
 
 namespace DataStructures.Queue.Models
 {
